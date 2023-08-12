@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:verdana;
+  }
+  #abc{
+    width:100%;
+    height:100vh;
+    background-image: url(../multimedia/fondo.jpg);
+    background-size: cover;
+  }
+  nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(42, 100, 57);
+    line-height: 50px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.7s all;
+  }
+  nav ul li:hover{
+    background-color:#088;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 30px;
+  }
+
+  .inframe{
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+  }
+
+
+
+	li {
+		list-style: none;
+		margin-bottom: 5px;
+    color: #fff;
+    font-size: 20px;
+	}
+
+	a.enlace-eliminar {
+		margin-left: 10px;
+		text-decoration: none;
+		font-size: 1rem;
+    font-size: 20px;
+    color:aqua;
+
+	}
+
+	.tachado {
+		text-decoration: line-through;
+    color:aqua
+
+	}
+
+
+  .listaTarea{
+
+    color: #fff;
+    margin: 10px;
+    padding: 10px
+  }
+
+  .lTarea{
+    color: #fff;
+    margin: 10px;
+    
+  }
+
+  .botonOk{
+    margin: 15px;
+    pad: 10px;
+    font-size: 20px;
+    background-color: #fff;
+  }
+
+  .listaTareas li{
+
+  }
+  .padre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .music {
+    margin: 20px;
+    padding: 20px;
+  }
+        
+
