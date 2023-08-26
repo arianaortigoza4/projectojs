@@ -1,4 +1,6 @@
 const CLAVE_LOCALSTORAGE = "lista_tareas";
+
+
 document.addEventListener("DOMContentLoaded", () => {
 	let tareas = []; // El arreglo global que vamos a manejar
 	// Declaración de elementos del DOM
@@ -10,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	$btnGuardarTarea.onclick = () => {
 		const tarea = $inputNuevaTarea.value;
 		if (!tarea) {
+			console.log("No se escribio nada")
 			return;
 		}
 		tareas.push({
@@ -20,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		guardarTareasEnAlmacenamiento();
 		refrescarListaDeTareas();
 	};
+
+
+
 
 	const obtenerTareasDeAlmacenamiento = () => {
 		const posibleLista = JSON.parse(localStorage.getItem(CLAVE_LOCALSTORAGE));
@@ -84,5 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	// Llamar a la función la primera vez
 	tareas = obtenerTareasDeAlmacenamiento();
-	refrescarListaDeTareas();
+	refrescarListaDeTareas(); 
+
 });

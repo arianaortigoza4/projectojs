@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de tareas</title>
      <!-- importo mi css -->
-   <link rel="stylesheet" href="css/estilos.css">
+   <link rel="stylesheet" href="../css/estilos.css">
 
 
      <!-- importo bootstrap -->
@@ -16,25 +16,26 @@
 </head>
 <body>
 <main>
-<div id="abc">
-<nav>
-    <ul>
-      <li><a href="index.html">Tareas pendientes</a></li>
-      <li><a href="paginas/tareas_terminadas.html">Tareas terminadas</a></li>
-      <li><a href="paginas/playlist.html">Tu playlist</a></li>
-    </ul>
-</nav>
-<div class="ms-4 d-none d-lg-block">
-<h2 class="listaTarea">Lista de tareas pendientes:</h2>
-</div>
-<label for="inputNuevaTarea" class="lTarea">Agregar nueva tarea: </label>
-<input class="form-control" type="text" placeholder="Ingrese su tarea" aria-label="default input example" id="inputNuevaTarea">
-<div class="d-grid gap-2">
-  <button class="btn btn btn-success botonOk" type="button" id= "btnAgregarTarea">Button</button>
-</div>
-<ul id="contenedorTareas" class="listaTareas"></ul>
+  <div id="abc">
+    <nav>
+        <ul>
+          <li><a href="index.html">Tareas pendientes</a></li>
+          <li><a href="paginas/tareas_terminadas.html">Tareas terminadas</a></li>
+          <li><a href="paginas/playlist.html">Tu playlist</a></li>
+        </ul>
+    </nav>
+    <div class="ms-4 d-none d-lg-block">
+    <h2 class="listaTarea">Lista de tareas pendientes:</h2>
+    </div>
+    <label for="inputNuevaTarea" class="lTarea">Agregar nueva tarea: </label>
+    <input class="form-control" type="text" placeholder="Ingrese su tarea" aria-label="default input example" id="inputNuevaTarea">
+    <div class="d-grid gap-2">
+      <button class="btn btn btn-success botonOk" type="button" id= "btnAgregarTarea">Button</button>
+    </div>
+    <ul id="contenedorTareas" class="listaTareas"></ul>
 </main>  
 <!--IMPORTO JS-->
-<script src="./js/index.js"></script>     
+<script src="../js/tareas_terminadas.js"></script>    
+
 </body>
 </html>
