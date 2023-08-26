@@ -2,13 +2,6 @@ const CLAVE_LOCALSTORAGE = "lista_tareas";
 
 const $contenedorTareas = document.querySelector("#contenedorTareas");
 
-
-
-
-
-
-
-
 const refrescarLista = (posibleLista) => {
     console.log("TAREAS");
     for (const key in posibleLista) {
@@ -20,7 +13,6 @@ const refrescarLista = (posibleLista) => {
         }
     }
 };
-
 
 const obtenerTareasDeAlmacenamiento = () => {
     const posibleLista = JSON.parse(localStorage.getItem(CLAVE_LOCALSTORAGE));
