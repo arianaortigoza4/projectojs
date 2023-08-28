@@ -84,9 +84,12 @@
     background-color: #fff;
   }
 
-  .listaTareas li{
-
+  .listaTareas1 li{
+    padding: 10px;
+    margin: 10px;
+    color: aqua;
   }
+
   .padre {
     display: flex;
     align-items: center;
@@ -98,4 +101,16 @@
     padding: 20px;
   }
         
+  .contenedorFiltro{
+    display: flex;
+    padding: 50px;
+  }
 
+  #contenedorTareas2{
+    margin-left: 250px;
+  }
+
+  .filtroBuscador{
+    display: block;
+    margin-left: 250px;
+  }

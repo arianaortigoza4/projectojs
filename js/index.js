@@ -92,4 +92,38 @@ document.addEventListener("DOMContentLoaded", () => {
 	tareas = obtenerTareasDeAlmacenamiento();
 	refrescarListaDeTareas(); 
 
+	function buscarTarea(){
+		//console.log($inputTarea.value);
+		const $contenedorTareas2 = document.querySelector("#contenedorTareas2");
+		$contenedorTareas2.innerHTML = "";
+		let coincidencias = false;
+		tareas.forEach(element => {
+			//console.log(element.tarea);
+			if (element.tarea.includes($inputTarea.value)) {
+				coincidencias = true;
+				const $li = document.createElement("li");
+				$li.textContent = element.tarea; 
+				$contenedorTareas2.appendChild($li);
+				console.log(element.tarea);
+			}
+		}); 
+
+		if (coincidencias == false) {
+			const $li = document.createElement("li");
+			$li.textContent = "NO HAY COINCIDENCIAS"; 
+			$contenedorTareas2.appendChild($li);
+		}
+
+	
+	}
+	
+	
+	
+	const $inputTarea = document.querySelector("#searchInput");
+	
+	$inputTarea.addEventListener("change",buscarTarea);
 });
+
+
+
+
