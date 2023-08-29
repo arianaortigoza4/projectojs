@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <!-- importo mi css -->
    <link rel="stylesheet" href="css/estilos.css">
+   <link rel="icon" type="" href="multimedia/fondo.jpg" />
 
 
      <!-- importo bootstrap -->
@@ -32,7 +33,7 @@
 <label for="inputNuevaTarea" class="lTarea">Agregar nueva tarea: </label>
 <input class="form-control" type="text" placeholder="Ingrese su tarea" aria-label="default input example" id="inputNuevaTarea">
 <div class="d-grid gap-2">
-  <button class="btn btn btn-success botonOk" type="button" id= "btnAgregarTarea">Button</button>
+  <button class="btn btn btn-success botonOk" type="button" id= "btnAgregarTarea">Agregar</button>
 </div>
 <div class="container">
   <div class="contenedorFiltro">
@@ -45,7 +46,9 @@
     <ul id="contenedorTareas2" class="listaTareas2"></ul>
   </div>
 </div>
-
+<div>
+<button class="btn btn-danger tareasCompletas" id="btnDeleteAll">Eliminar tareas completadas</button>
+</div>
 </main>  
 <!--IMPORTO JS-->
 <script src="./js/index.js"></script>     

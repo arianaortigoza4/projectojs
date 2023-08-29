@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	tareas = obtenerTareasDeAlmacenamiento();
 	refrescarListaDeTareas(); 
 
+	
 	function buscarTarea(){
 		//console.log($inputTarea.value);
 		const $contenedorTareas2 = document.querySelector("#contenedorTareas2");
@@ -123,14 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				console.log(element.tarea);
 			}
 		}); 
-
+		
 		if (coincidencias == false) {
 			const $li = document.createElement("li");
 			$li.textContent = "NO HAY COINCIDENCIAS"; 
 			$contenedorTareas2.appendChild($li);
 		}
-
-	
+		
+		
 	}
 	
 	
@@ -138,8 +139,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	const $inputTarea = document.querySelector("#searchInput");
 	
 	$inputTarea.addEventListener("change",buscarTarea);
+	
+	
+//Funcion que me elimina toda la lista 	
+	function deleteAll(){
+		tareas = [];
+		guardarTareasEnAlmacenamiento(tareas);
+		refrescarListaDeTareas();
+		
+	}
+	
+	const btnDeleteAll_Element = document.getElementById("btnDeleteAll");
+	
+	btnDeleteAll_Element.addEventListener("click",deleteAll);
 });
-
-
 
 

@@ -1,3 +1,4 @@
+//Utilizo los datos del LOCALSTORAGE para filtrar los li terminados y los agrego en otra pagina (Tareas terminadas)
 const CLAVE_LOCALSTORAGE = "lista_tareas";
 
 const $contenedorTareas = document.querySelector("#contenedorTareas");
