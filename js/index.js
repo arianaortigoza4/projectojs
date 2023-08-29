@@ -20,12 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			terminada: false,
 		});
 		$inputNuevaTarea.value = "";
+		//Agrego modal para que cuando agregue una tarea me avise con SweetAlert
+		Swal.fire({
+
+			title: "Tarea agregada",
+	  
+			icon: "success",
+	  
+		});
 		guardarTareasEnAlmacenamiento();
 		refrescarListaDeTareas();
 	};
-
-
-
 
 	const obtenerTareasDeAlmacenamiento = () => {
 		const posibleLista = JSON.parse(localStorage.getItem(CLAVE_LOCALSTORAGE));
@@ -38,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const guardarTareasEnAlmacenamiento = () => {
 		localStorage.setItem(CLAVE_LOCALSTORAGE, JSON.stringify(tareas));
+
 	};
 
 	// Definir función que refresca la lista de tareas a partir del arreglo global
@@ -49,15 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			$enlaceParaEliminar.classList.add("enlace-eliminar");
 			$enlaceParaEliminar.innerHTML = "&times;";
 			$enlaceParaEliminar.href = "";
+			$enlaceParaEliminar.onclick
 			$enlaceParaEliminar.onclick = (evento) => {
 				evento.preventDefault();
-				if (!confirm("¿Eliminar tarea?")) {
-					return;
-				}
-				tareas.splice(indice, 1);
-				// Guardar los cambios
-				guardarTareasEnAlmacenamiento(tareas);
-				refrescarListaDeTareas();
+				//Agrego modal para eliminar tarea utilizando sweetAlert
+				Swal.fire({
+					title: "¿Estás seguro/a de eliminar la tarea?",
+					icon: "warning",
+					showCancelButton: true,
+					confirmButtonText: "Si",
+					cancelButtonText: "No",
+				  }).then((result) => {
+					if (result.isConfirmed) {
+						console.log(result)
+						tareas.splice(indice, 1);
+						// Guardar los cambios
+						guardarTareasEnAlmacenamiento(tareas);
+						refrescarListaDeTareas();
+					}
+				  });
 			};
 			// El input para marcar la tarea como terminada
 			const $checkbox = document.createElement("input");
